@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ExtremeManager/WebRoot/WEB-INF/lib/lib/asm-3.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ExtremeManager/WebRoot/WEB-INF/lib/lib/cglib-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ExtremeManager/WebRoot/WEB-INF/lib/lib/mybatis-spring-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ExtremeManager/WebRoot/WEB-INF/lib/lib/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ExtremeManager/WebRoot/WEB-INF/lib/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ExtremeManager/WebRoot/WEB-INF/lib/lib/javassist-3.17.1-GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ExtremeManager/WebRoot/WEB-INF/lib/lib/slf4j-api-1.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ExtremeManager/WebRoot/WEB-INF/lib/lib/slf4j-log4j12-1.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ExtremeManager/WebRoot/WEB-INF/lib/lib/mybatis-3.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,120 @@
+ #酒店管理系统的操作员信息表：1
+   create table if not exists userInfo 
+   (
+       uiID  int primary key auto_increment,#操作员流水号
+       uiname varchar(20) not null unique,#非空唯一
+       uipassword varchar(50) not null,
+       uirole int default 1,#权限，角色，默认1：普通用户
+       uirealname varchar(20) not null,#真实姓名
+       uitelephone varchar(11) not null#手机号码
+);
+#酒店房间信息表:2
+     create table if not exists room
+     (
+        rNo  int primary key auto_increment,#流水号
+        roomNo int not null unique,#房间号
+        roomType varchar(20) not null,#房间类型
+        roomPrice float not null,#房间价格
+        roomStatus varchar(10) not null,#房间状态   建立、删除check时修改该表 调整房间状态
+        roomMark varchar(50)#备注
+     )auto_increment=1000;
+    
+
+    
+#入住/退房酒店登记表：3
+     create table if not exists check
+     (
+		ciNo int primary key auto_increment,
+        roomNo int not null ,#房间号!
+         roomType varchar(20) not null,#房间类型
+        name varchar(20) not null,#客人姓名 ！
+        credentialsNo varchar(18) not null,#证件号码！
+       ciDateTime timestamp default now() ,#入住时间:系统生成 now()！
+		coDateTime varchar(50) ,#退房时间
+       oiName varchar(20) not null,#酒店操作员真实姓名!
+        ciMark varchar(50)#备注!
+     )auto_increment=10000;
+
+
+insert into room(roomNo,roomType,roomPrice,roomStatus,roomMark)
+   values("101","单人间","100","占用","null");
+insert into room(roomNo,roomType,roomPrice,roomStatus,roomMark)
+   values("102","单人间","100","空闲","null");
+insert into room(roomNo,roomType,roomPrice,roomStatus,roomMark)
+   values("103","单人间","100","空闲","null");
+insert into room(roomNo,roomType,roomPrice,roomStatus,roomMark)
+   values("104","单人间","100","清扫","null");
+insert into room(roomNo,roomType,roomPrice,roomStatus,roomMark)
+   values("105","单人间","100","维修","null");
+insert into room(roomNo,roomType,roomPrice,roomStatus,roomMark)
+   values("201","双人间","200","占用","null");
+insert into room(roomNo,roomType,roomPrice,roomStatus,roomMark)
+   values("202","双人间","200","空闲","null");
+insert into room(roomNo,roomType,roomPrice,roomStatus,roomMark)
+   values("203","双人间","200","清扫","null");
+insert into room(roomNo,roomType,roomPrice,roomStatus,roomMark)
+   values("204","双人间","200","占用","null");
+insert into room(roomNo,roomType,roomPrice,roomStatus,roomMark)
+   values("205","双人间","200","占用","null");
+insert into room(roomNo,roomType,roomPrice,roomStatus,roomMark)
+   values("301","家庭套房","1000","占用","null");
+insert into room(roomNo,roomType,roomPrice,roomStatus,roomMark)
+   values("302","家庭套房","1000","空闲","null");
+insert into room(roomNo,roomType,roomPrice,roomStatus,roomMark)
+   values("303","家庭套房","1000","清扫","null");
+insert into room(roomNo,roomType,roomPrice,roomStatus,roomMark)
+   values("304","家庭套房","1000","空闲","null");
+insert into room(roomNo,roomType,roomPrice,roomStatus,roomMark)
+   values("305","家庭套房","1000","空闲","null");
+   
+   
+   
+   
+   
+   insert into checkIn(roomNo,roomType,name,credentialsNo,coDateTime,oiName)
+  values("101","单人间","陈二狗","130626199704024122","2018/8/31","聂兴安");
+insert into checkIn(roomNo,roomType,name,credentialsNo,coDateTime,oiName)
+  values("201","双人间","大黑狗","130626199704024122","2018/8/31","聂兴安");
+insert into checkIn(roomNo,roomType,name,credentialsNo,coDateTime,oiName)
+  values("204","双人间","陈雪岩","130626199704024122","2018/8/31","聂兴安");
+insert into checkIn(roomNo,roomType,name,credentialsNo,coDateTime,oiName)
+  values("205","双人间","陈二哥","130626199704024122","2018/8/31","聂兴安");
+insert into checkIn(roomNo,roomType,name,credentialsNo,coDateTime,oiName)
+  values("301","家庭套房","陈黑狗","130626199704024122","2018/8/31","聂兴安");
+  
+  
+  
+  insert into userinfo (uiname,uipassword,uirole,uirealname,uitelephone)
+  values ('xiaobo','000','0','晓波','13333333333');
+  insert into userinfo (uiname,uipassword,uirealname,uitelephone)
+  values ('chenhui','000','陈辉','11111111111');
+  insert into userinfo (uiname,uipassword,uirealname,uitelephone)
+  values ('shuailiqiang','000','帅立强','1222222222' );
+  
+  insert into userinfo(uiname,uipassword,uirealname,uitelephone)
+values('gl','000','盖伦','13333333333');
+insert into userinfo(uiname,uipassword,uirealname,uitelephone)
+values('ktln','000','卡特琳娜','13333333333');
+insert into userinfo(uiname,uipassword,uirealname,uitelephone)
+values('mezh','000','马尔扎哈','13333333333');
+insert into userinfo(uiname,uipassword,uirealname,uitelephone)
+values('zx','000','赵信','13333333333');
+insert into userinfo(uiname,uipassword,uirealname,uitelephone)
+values('zy','000','佐伊','13333333333');
+insert into userinfo(uiname,uipassword,uirealname,uitelephone)
+values('fz','000','菲兹','13333333333');
+insert into userinfo(uiname,uipassword,uirealname,uitelephone)
+values('jl','000','婕拉','13333333333');
+insert into userinfo(uiname,uipassword,uirealname,uitelephone)
+values('ksl','000','凯瑟琳','13333333333');
+insert into userinfo(uiname,uipassword,uirealname,uitelephone)
+values('ysl','000','伊瑟拉','13333333333');
+insert into userinfo(uiname,uipassword,uirealname,uitelephone)
+values('jan','000','吉安娜','13333333333');
+insert into userinfo(uiname,uipassword,uirealname,uitelephone)
+values('fd','000','弗丁','13333333333');
+  
+  
+  
+   
+   

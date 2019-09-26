@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Spring3.0PersistenceJDBCLibraries">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ExtremeManager/WebRoot/WEB-INF/lib/Spring3/Spring3.0PersistenceJDBCLibraries/com.springsource.org.apache.commons.lang-2.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ExtremeManager/WebRoot/WEB-INF/lib/Spring3/Spring3.0PersistenceJDBCLibraries/com.springsource.com.mchange.v2.c3p0-0.9.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ExtremeManager/WebRoot/WEB-INF/lib/Spring3/Spring3.0PersistenceJDBCLibraries/com.springsource.org.apache.commons.pool-1.5.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ExtremeManager/WebRoot/WEB-INF/lib/Spring3/Spring3.0PersistenceJDBCLibraries/commons-dbcp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ExtremeManager/WebRoot/WEB-INF/lib/Spring3/Spring3.0PersistenceJDBCLibraries/xapool.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ExtremeManager/WebRoot/WEB-INF/lib/Spring3/Spring3.0PersistenceJDBCLibraries/jotm.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

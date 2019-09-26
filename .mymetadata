@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ExtremeManager"
+  id="myeclipse.1535540719426"
+  context-root="/ExtremeManager"
+  j2ee-spec="5.0"
+  archive="ExtremeManager.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

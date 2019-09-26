@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <!-- namespace命名空间的值一定是约束此文件的接口的全路径 -->
+<mapper namespace="com.nxa.mapper.UserInfoMapper">  
+
+ <insert id="register" parameterType="UserInfo">
+ 	insert into UserInfo(uiname,uipassword,uirealname,uitelephone)
+ 	values (#{uiName},#{uiPassword},#{uiRealname},#{uiTelephone})
+ </insert>  
+ 
+ <update id="modify" parameterType="UserInfo">
+ 	update UserInfo set uiPassword=#{uiPassword},uitelephone=#{uiTelephone} where
+ 	uiid=#{uiID} 
+ </update>
+ 
+ <delete id="remove" parameterType="Integer">
+ 	delete from UserInfo where uiid=#{uiID}
+ </delete>
+ 
+ <select id="queryAll" resultType="UserInfo">
+ 	select * from UserInfo	
+ </select>
+ <select id="login" parameterType="UserInfo" resultType="Integer">
+ 	select count(*) from UserInfo where uiName=#{uiName} and uiPassword=#{uiPassword} and uiRole=#{uiRole}
+ </select>
+ 
+</mapper>

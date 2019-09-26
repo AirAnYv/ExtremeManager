@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<package name="com.nxa.bean" />
+	</typeAliases>
+
+	<mappers>
+		<mapper resource="com/nxa/mapper/UserInfoMapper.xml" />
+		<mapper resource="com/nxa/mapper/RoomMapper.xml" />
+		<mapper resource="com/nxa/mapper/CheckMapper.xml" />
+	</mappers>
+	
+	
+</configuration>

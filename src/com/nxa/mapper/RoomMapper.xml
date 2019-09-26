@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <!-- namespace命名空间的值一定是约束此文件的接口的全路径 -->
+<mapper namespace="com.nxa.mapper.RoomMapper">  
+
+<insert id="addRoom" parameterType="Room">
+	insert into Room (roomNo,roomType,roomPrice,roomStatus,roomMark) values
+	(#{roomNo},#{roomType},#{roomPrice},#{roomStatus},#{roomMark})
+</insert>
+
+<update id="modifyRoom" parameterType="Room">
+	update Room set roomNo=#{roomNo},roomType=#{roomType},roomPrice=#{roomPrice},
+	roomStatus=#{roomStatus},roomMark=#{roomMark}
+</update>
+
+<delete id="removeRoom" parameterType="Integer">
+	detele * Room where roomNo=#{roomNo}
+</delete>
+
+<select id="getRoomPrice" parameterType="Integer" resultType="Double">
+	select roomPrice from room where roomNo=#{roomNo}
+</select>
+
+
+<select id="queryAll" resultType="Room">
+	select roomNo,roomStatus from room
+</select>
+ 
+</mapper>
